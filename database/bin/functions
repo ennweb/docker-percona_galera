@@ -105,5 +105,5 @@ function configure_env() {
 }
 
 function configure_host() {
-  export HOST=`/sbin/ip route|awk '/default/ { print $3 }'`
+  export HOST=`ip -4 addr show eth0| grep -Po 'inet \K[\d.]+'`
 }
