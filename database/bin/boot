@@ -29,6 +29,8 @@ export TTL=${TTL:-10}
 
 if [[ -n ${HOST} ]]; then
   export WSREP_OPTIONS="--wsrep_node_address=${HOST}"
+else
+  configure_host
 fi
 
 echo "==> Initialize"
