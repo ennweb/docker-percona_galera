@@ -103,3 +103,7 @@ function configure_registrator() {
 function configure_env() {
   export CONFD_OPTIONS="-config-file /app/confd.toml -backend env"
 }
+
+function configure_host() {
+  export HOST=`/sbin/ip route|awk '/default/ { print $3 }'`
+}
