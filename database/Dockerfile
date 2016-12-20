@@ -25,7 +25,7 @@ RUN \
   runit \
   percona-xtradb-cluster-client-${PERCONA_VERSION} \
   percona-xtradb-cluster-server-${PERCONA_VERSION}  \
-  percona-xtrabackup \
+  percona-xtrabackup-24 \
   percona-xtradb-cluster-garbd-3.x \
   --no-install-recommends && \
   locale-gen en_US.UTF-8 && \
