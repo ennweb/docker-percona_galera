@@ -43,7 +43,7 @@ function init_database() {
   if [[ ! -d /var/lib/mysql/mysql ]]; then
     echo "==> An empty or uninitialized database is detected in /var/lib/mysql"
     echo "-----> Creating database..."
-    mysql_install_db > /dev/null 2>&1
+    mysqld --initialize-insecure > /dev/null 2>&1
     echo "-----> Done!"
   else
     echo "-----> Using an existing database"
